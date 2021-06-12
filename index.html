@@ -22,6 +22,7 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <link rel="stylesheet" href="style.css" />
   </head>
+  <script defer src="index.js"></script>
   <body>
     <main>
       <div class="heading">
@@ -32,19 +33,48 @@
           invaluable.
         </p>
       </div>
-      <div class="form">
+      <form class="form">
         <div class="form-text">Try it free 7 days then $20/mo. thereafter</div>
         <div class="form-input">
-          <input type="text" placeholder="First Name" />
-          <input type="text" placeholder="Last Name" />
-          <input type="text" placeholder="Email Address" />
-          <input type="password" placeholder="Password" />
+          <input
+            id="firstName"
+            name="firstName"
+            type="text"
+            placeholder="First Name"
+          />
+          <p class="error-hint hidden"><i>First Name cannot be empty</i></p>
+          <input
+            id="lastName"
+            name="lastName"
+            type="text"
+            placeholder="Last Name"
+          />
+          <p class="error-hint hidden"><i>Last Name cannot be empty</i></p>
+          <input
+            id="email"
+            name="email"
+            type="text"
+            placeholder="Email Address"
+          />
+          <p class="error-hint hidden">
+            <i>Looks like this is not an email</i>
+          </p>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Password"
+          />
+          <p class="error-hint hidden"><i>Password cannot be empty</i></p>
           <button>Claim your free trial</button>
           <p>
             By clicking the button you are agreeing to our
             <a href="#">Terms and Services</a>
           </p>
         </div>
+      </form>
+      <div class="feedback-text hidden">
+        <p>Thank you, your data is being submitted.</p>
       </div>
     </main>
     <footer>
